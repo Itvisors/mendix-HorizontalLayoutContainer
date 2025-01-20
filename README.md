@@ -1,24 +1,42 @@
 ## HorizontalLayoutContainer
-[Horizontal Layout Container]
+Show items on one row while keeping content in the row aligned vertically across the items.
 
 ## Features
-[feature highlights]
+- Show items horizontally using a datasource
+- Configure multiple widget drop zones
+- Ensure the content in each drop zone is aligned vertically across the items
+- By default the items are spaced evenly horizontally
+
+## Limitations
+- Intended to be used for small lists.
+- All datasource items are rendered at once.
+- No click handling, configure it on your content using a container where necessary
 
 ## Usage
-[step by step instructions]
+- Place the widget on a page or snippet
+- Configure the datasource
+- Configure content items, these become drop zones on your page design
+- Optionally add a class of your own on the items to configure their width
 
-## Demo project
-[link to sandbox]
+## Additional styling to make input elements resize
 
-## Issues, suggestions and feature requests
-[link to GitHub issues]
+Input elements may not resize horizontally like you expect it to. In the test app I added this class on the input widget to make it resize to the maximum available space in the item:
 
-## Development and contribution
+``` CSS
+.input-full-width {
+    input {
+        width: 100%;
+    }
+}
+```
 
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
+You may need different custom styling to make your design work so this is not a one-size-fits-all solution.
 
-[specify contribution]
+## Example
+
+Download the demo app from the [github repo](https://github.com/Itvisors/mendix-HorizontalLayoutContainer) for an example. Just download the entire repository using the `Code` button and extract the downloaded zip. The test folder contains the Mendix app
+
+
+
+
+

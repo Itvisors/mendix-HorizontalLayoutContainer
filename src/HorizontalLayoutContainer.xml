@@ -5,13 +5,27 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Horizontal Layout Container</name>
     <description>Horizontal Layout Container</description>
-    <icon/>
+    <studioProCategory>Data containers</studioProCategory>
     <properties>
         <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
+            <property key="ds" type="datasource" isList="true">
+                <caption>Data source</caption>
+                <description></description>
             </property>
+
+            <property key="contentList" type="object" isList="true">
+                <caption>Content</caption>
+                <description>Content, add items to create multiple rows, making sure the content in each row aligns across all items.</description>
+                <properties>
+                    <propertyGroup caption="Content">
+                        <property key="content" type="widgets" dataSource="../ds">
+                            <caption>Content</caption>
+                            <description></description>
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property>
+
         </propertyGroup>
     </properties>
 </widget>

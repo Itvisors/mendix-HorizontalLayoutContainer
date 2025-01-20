@@ -1,10 +1,14 @@
 import { ReactElement, createElement } from "react";
-import { HelloWorldSample } from "./components/HelloWorldSample";
+import { HorizontalLayout } from "./components/HorizontalLayout";
 
 import { HorizontalLayoutContainerContainerProps } from "../typings/HorizontalLayoutContainerProps";
 
 import "./ui/HorizontalLayoutContainer.css";
 
-export function HorizontalLayoutContainer({ sampleText }: HorizontalLayoutContainerContainerProps): ReactElement {
-    return <HelloWorldSample sampleText={sampleText ? sampleText : "World"} />;
+export function HorizontalLayoutContainer(props: HorizontalLayoutContainerContainerProps): ReactElement {
+    const { ds, name } = props;
+    if (!ds || !ds.items) {
+        return <div className={name}></div>;
+    }
+    return <HorizontalLayout dsItems={ds.items} contentList={props.contentList} widgetName={props.name} widgetClass={props.class} />;
 }

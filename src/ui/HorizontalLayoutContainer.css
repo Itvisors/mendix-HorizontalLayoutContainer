@@ -1,6 +1,17 @@
 /*
 Place your custom CSS here
 */
-.widget-hello-world {
+.horizontal-layout-container-main {
+    display: flex;
+    flex-direction: column;
+}
 
+.horizontal-layout-container-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.horizontal-layout-container-item {
+    flex: 1;
 }

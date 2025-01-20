@@ -21,10 +21,11 @@ public class ListviewItem implements com.mendix.systemwideinterfaces.core.IEntit
 	public enum MemberNames
 	{
 		Name("Name"),
-		IsAdditionalContent("IsAdditionalContent"),
+		SequenceNumber("SequenceNumber"),
 		Caption("Caption"),
 		Text("Text"),
-		Explanation("Explanation");
+		Explanation("Explanation"),
+		ListviewItem_TestContainer("TestHorizontalLayoutContainer.ListviewItem_TestContainer");
 
 		private final java.lang.String metaName;
 
@@ -122,39 +123,39 @@ public class ListviewItem implements com.mendix.systemwideinterfaces.core.IEntit
 	}
 
 	/**
-	 * @return value of IsAdditionalContent
+	 * @return value of SequenceNumber
 	 */
-	public final java.lang.Boolean getIsAdditionalContent()
+	public final java.lang.Integer getSequenceNumber()
 	{
-		return getIsAdditionalContent(getContext());
+		return getSequenceNumber(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of IsAdditionalContent
+	 * @return value of SequenceNumber
 	 */
-	public final java.lang.Boolean getIsAdditionalContent(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Integer getSequenceNumber(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.IsAdditionalContent.toString());
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.SequenceNumber.toString());
 	}
 
 	/**
-	 * Set value of IsAdditionalContent
-	 * @param isadditionalcontent
+	 * Set value of SequenceNumber
+	 * @param sequencenumber
 	 */
-	public final void setIsAdditionalContent(java.lang.Boolean isadditionalcontent)
+	public final void setSequenceNumber(java.lang.Integer sequencenumber)
 	{
-		setIsAdditionalContent(getContext(), isadditionalcontent);
+		setSequenceNumber(getContext(), sequencenumber);
 	}
 
 	/**
-	 * Set value of IsAdditionalContent
+	 * Set value of SequenceNumber
 	 * @param context
-	 * @param isadditionalcontent
+	 * @param sequencenumber
 	 */
-	public final void setIsAdditionalContent(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean isadditionalcontent)
+	public final void setSequenceNumber(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer sequencenumber)
 	{
-		getMendixObject().setValue(context, MemberNames.IsAdditionalContent.toString(), isadditionalcontent);
+		getMendixObject().setValue(context, MemberNames.SequenceNumber.toString(), sequencenumber);
 	}
 
 	/**
@@ -263,6 +264,53 @@ public class ListviewItem implements com.mendix.systemwideinterfaces.core.IEntit
 	public final void setExplanation(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String explanation)
 	{
 		getMendixObject().setValue(context, MemberNames.Explanation.toString(), explanation);
+	}
+
+	/**
+	 * @throws com.mendix.core.CoreException
+	 * @return value of ListviewItem_TestContainer
+	 */
+	public final testhorizontallayoutcontainer.proxies.TestContainer getListviewItem_TestContainer() throws com.mendix.core.CoreException
+	{
+		return getListviewItem_TestContainer(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ListviewItem_TestContainer
+	 * @throws com.mendix.core.CoreException
+	 */
+	public final testhorizontallayoutcontainer.proxies.TestContainer getListviewItem_TestContainer(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		testhorizontallayoutcontainer.proxies.TestContainer result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ListviewItem_TestContainer.toString());
+		if (identifier != null) {
+			result = testhorizontallayoutcontainer.proxies.TestContainer.load(context, identifier);
+		}
+		return result;
+	}
+
+	/**
+	 * Set value of ListviewItem_TestContainer
+	 * @param listviewitem_testcontainer
+	 */
+	public final void setListviewItem_TestContainer(testhorizontallayoutcontainer.proxies.TestContainer listviewitem_testcontainer)
+	{
+		setListviewItem_TestContainer(getContext(), listviewitem_testcontainer);
+	}
+
+	/**
+	 * Set value of ListviewItem_TestContainer
+	 * @param context
+	 * @param listviewitem_testcontainer
+	 */
+	public final void setListviewItem_TestContainer(com.mendix.systemwideinterfaces.core.IContext context, testhorizontallayoutcontainer.proxies.TestContainer listviewitem_testcontainer)
+	{
+		if (listviewitem_testcontainer == null) {
+			getMendixObject().setValue(context, MemberNames.ListviewItem_TestContainer.toString(), null);
+		} else {
+			getMendixObject().setValue(context, MemberNames.ListviewItem_TestContainer.toString(), listviewitem_testcontainer.getMendixObject().getId());
+		}
 	}
 
 	@java.lang.Override

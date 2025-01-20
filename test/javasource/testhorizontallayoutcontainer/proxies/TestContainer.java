@@ -20,7 +20,8 @@ public class TestContainer implements com.mendix.systemwideinterfaces.core.IEnti
 	 */
 	public enum MemberNames
 	{
-		ItemCount("ItemCount");
+		Name("Name"),
+		Description("Description");
 
 		private final java.lang.String metaName;
 
@@ -72,40 +73,85 @@ public class TestContainer implements com.mendix.systemwideinterfaces.core.IEnti
 		return testhorizontallayoutcontainer.proxies.TestContainer.initialize(context, mendixObject);
 	}
 
-	/**
-	 * @return value of ItemCount
-	 */
-	public final java.lang.Integer getItemCount()
+	public static java.util.List<testhorizontallayoutcontainer.proxies.TestContainer> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
-		return getItemCount(getContext());
+		return com.mendix.core.Core.createXPathQuery(String.format("//%1$s%2$s", entityName, xpathConstraint))
+			.execute(context)
+			.stream()
+			.map(obj -> testhorizontallayoutcontainer.proxies.TestContainer.initialize(context, obj))
+			.collect(java.util.stream.Collectors.toList());
+	}
+
+	/**
+	 * @return value of Name
+	 */
+	public final java.lang.String getName()
+	{
+		return getName(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of ItemCount
+	 * @return value of Name
 	 */
-	public final java.lang.Integer getItemCount(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.String getName(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.ItemCount.toString());
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Name.toString());
 	}
 
 	/**
-	 * Set value of ItemCount
-	 * @param itemcount
+	 * Set value of Name
+	 * @param name
 	 */
-	public final void setItemCount(java.lang.Integer itemcount)
+	public final void setName(java.lang.String name)
 	{
-		setItemCount(getContext(), itemcount);
+		setName(getContext(), name);
 	}
 
 	/**
-	 * Set value of ItemCount
+	 * Set value of Name
 	 * @param context
-	 * @param itemcount
+	 * @param name
 	 */
-	public final void setItemCount(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer itemcount)
+	public final void setName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String name)
 	{
-		getMendixObject().setValue(context, MemberNames.ItemCount.toString(), itemcount);
+		getMendixObject().setValue(context, MemberNames.Name.toString(), name);
+	}
+
+	/**
+	 * @return value of Description
+	 */
+	public final java.lang.String getDescription()
+	{
+		return getDescription(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Description
+	 */
+	public final java.lang.String getDescription(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Description.toString());
+	}
+
+	/**
+	 * Set value of Description
+	 * @param description
+	 */
+	public final void setDescription(java.lang.String description)
+	{
+		setDescription(getContext(), description);
+	}
+
+	/**
+	 * Set value of Description
+	 * @param context
+	 * @param description
+	 */
+	public final void setDescription(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String description)
+	{
+		getMendixObject().setValue(context, MemberNames.Description.toString(), description);
 	}
 
 	@java.lang.Override

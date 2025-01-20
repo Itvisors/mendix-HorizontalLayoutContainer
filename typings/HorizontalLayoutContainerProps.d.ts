@@ -3,14 +3,24 @@
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix Widgets Framework Team
  */
-import { CSSProperties } from "react";
+import { ComponentType, CSSProperties, ReactNode } from "react";
+import { ListValue, ListWidgetValue } from "mendix";
+
+export interface ContentListType {
+    content: ListWidgetValue;
+}
+
+export interface ContentListPreviewType {
+    content: { widgetCount: number; renderer: ComponentType<{ children: ReactNode; caption?: string }> };
+}
 
 export interface HorizontalLayoutContainerContainerProps {
     name: string;
     class: string;
     style?: CSSProperties;
     tabIndex?: number;
-    sampleText: string;
+    ds: ListValue;
+    contentList: ContentListType[];
 }
 
 export interface HorizontalLayoutContainerPreviewProps {
@@ -24,5 +34,6 @@ export interface HorizontalLayoutContainerPreviewProps {
     readOnly: boolean;
     renderMode: "design" | "xray" | "structure";
     translate: (text: string) => string;
-    sampleText: string;
+    ds: {} | { caption: string } | { type: string } | null;
+    contentList: ContentListPreviewType[];
 }
