@@ -10,5 +10,12 @@ export function HorizontalLayoutContainer(props: HorizontalLayoutContainerContai
     if (!ds || !ds.items) {
         return <div className={name}></div>;
     }
-    return <HorizontalLayout dsItems={ds.items} contentList={props.contentList} widgetName={props.name} widgetClass={props.class} />;
+    return (
+        <HorizontalLayout
+            dsItems={ds.items}
+            contentList={props.contentList}
+            widgetName={props.name}
+            widgetClass={props.class}
+        />
+    );
 }
