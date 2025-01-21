@@ -1,5 +1,19 @@
 @import '../../../theme/web/custom-variables';
 
+div.mx-listview.listview-flex-row {
+    margin: 0px;
+    ul {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        li {
+            flex: 1;
+        }
+    }
+}
+
 .input-full-width {
     input {
         width: 100%;
