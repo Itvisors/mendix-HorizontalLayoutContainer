@@ -6,18 +6,18 @@ package datawidgets.proxies;
 
 public enum Filter_Operators
 {
-	contains("bbe3e06d-fa53-4ed5-bc2f-9ca2f39ce509"),
-	startsWith("d7ac6450-2e18-4d27-bb2b-a4ba3ecc92a9"),
-	endsWith("fc6357d8-67ca-4308-aa82-572b417eb49a"),
-	between("652ff08f-1997-44dc-a76f-3f1292711855"),
-	greater("6f6e8003-f329-4535-9888-017f3e85ed2c"),
-	greaterEqual("c4e6dc18-b4ae-4f31-bef8-79c7e43dcb6b"),
-	equal("791134d4-d315-4b9f-ab3f-696fa7dc27a0"),
-	notEqual("2b221b2a-f555-4175-9261-f107bc8ca1ed"),
-	smaller("f1a7b327-0dfd-49df-88b5-2c6a94fccf54"),
-	smallerEqual("6dbd256c-7354-4be5-a786-1cff722a4e85"),
-	empty("eecba1bd-1019-4e54-b84b-f54e5d8eca05"),
-	notEmpty("f49e94d3-147e-4de4-9f0c-0e5de9961c03");
+	contains("eb3129d1-bc8d-4309-94fe-beea07555263"),
+	startsWith("0d60b4f6-5de2-4c4d-ae50-5e9731014761"),
+	endsWith("fa9ecd23-753e-4a22-a9cd-040fd0c9732d"),
+	between("b7c86830-1c1f-437d-bc36-ec44c973b5de"),
+	greater("f02c85fb-2aec-4266-bed6-55dbccc9a219"),
+	greaterEqual("c72ed089-6b70-4bae-be98-af6456c747d7"),
+	equal("7ad1ccda-7356-4de8-ad73-2a3a5f211a9d"),
+	notEqual("2b884f98-504e-47bb-ab31-24334d7b832f"),
+	smaller("b3b0876e-a4ad-412e-90cd-9a00a1c03d7e"),
+	smallerEqual("8191d04a-9a59-4333-8e1d-fa87c40ebdce"),
+	empty("043fc410-1c57-45bd-a11f-cc023913e272"),
+	notEmpty("20a566a6-ef6f-4d3b-aaf3-82f79f4db513");
 
 	private final java.lang.String i18nCaptionKey;
 	
