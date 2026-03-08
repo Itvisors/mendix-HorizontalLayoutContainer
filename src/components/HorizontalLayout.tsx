@@ -1,4 +1,4 @@
-import { ReactElement, createElement } from "react";
+import { ReactElement } from "react";
 import { ObjectItem } from "mendix";
 import { ContentListType } from "typings/HorizontalLayoutContainerProps";
 

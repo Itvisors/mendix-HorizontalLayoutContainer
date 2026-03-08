@@ -1,4 +1,4 @@
-import { ReactElement, createElement } from "react";
+import { ReactElement } from "react";
 import { HorizontalLayout } from "./components/HorizontalLayout";
 
 import { HorizontalLayoutContainerContainerProps } from "../typings/HorizontalLayoutContainerProps";
